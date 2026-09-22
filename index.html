@@ -5,54 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Somesh Kennedy — AI Engineer</title>
   <meta name="description" content="Somesh Kennedy — AI engineer building agentic systems, RAG pipelines and LLM services. MS Computer Science, UT Dallas. Open to AI/ML Engineer, Software Engineer, Data Engineer and Data Scientist roles.">
-  <meta name="theme-color" content="#050505">
+  <meta name="theme-color" content="#07070a">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Somesh Kennedy — AI Engineer">
   <meta property="og:description" content="Agentic AI, RAG and LLM engineering — from prompt evaluation to production deployment.">
   <meta property="og:url" content="https://somesh-kennedy.github.io/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23c6f432'%3ESK%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070a'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23c6f432'%3ESK%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ============ HERO ============ -->
-  <header class="hero" id="top">
-    <div class="hero-particles" aria-hidden="true">
-      <span class="p p1"></span><span class="p p2"></span><span class="p p3"></span>
-      <span class="p p4"></span><span class="p p5"></span><span class="p p6"></span>
-    </div>
+  <div class="bg-fx" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+  <div class="progress" id="progress"></div>
 
-    <nav class="hero-nav shell">
-      <a href="#top" class="brand">SOMESH KENNEDY</a>
-      <a href="mailto:somesh.kennedy@gmail.com">SOMESH.KENNEDY@GMAIL.COM</a>
-      <span aria-hidden="true"></span>
-    </nav>
-
-    <div class="hero-meta shell">
-      <p>AI/ML Engineer<br>Software Engineer<br>Data Engineer<br>Data Scientist</p>
-      <p class="location">DALLAS, TEXAS /<br><span id="clock">-- -- --</span></p>
-    </div>
-
-    <div class="hero-title shell">
-      <div class="edition"><strong>/26</strong><span>SELECTED WORK</span></div>
-      <h1>AI<br>ENGINEER<span class="dot">.</span></h1>
-    </div>
-
-    <div class="hero-footer shell">
-      <a href="#featured">SELECTED WORK ↓</a>
-      <div>
-        <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">GH</a>
-        <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener">LI</a>
-        <a href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">CV</a>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner shell">
+      <a href="#top" class="brand"><span class="mark">SK</span>Somesh Kennedy</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#introduction">Intro</a>
+        <a href="#featured">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Toolkit</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="nav-cta">
+        <span class="status-pill"><span class="dot"></span>Open to work</span>
+        <a class="btn solid" href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <!-- Menu -->
-  <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   <div class="menu" id="menu" aria-hidden="true">
     <nav class="menu-inner shell" aria-label="Sections">
       <a href="#introduction"><i>01</i>Introduction</a>
@@ -73,31 +67,76 @@
     </div>
   </div>
 
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-inner shell">
+      <div class="hero-eyebrow reveal"><span class="dot"></span><span class="eyebrow">AI / ML ENGINEER — MS CS @ UT DALLAS</span></div>
+
+      <h1 class="reveal">I build AI systems that <span class="cycle-wrap" id="cycleWrap"><span class="cycle" id="cycleWord">reason.</span></span></h1>
+
+      <p class="hero-sub reveal">Agentic pipelines, retrieval systems and the production infrastructure underneath them. I've shipped risk-assessment agents, RAG platforms and LLM services across internships in the <strong>US and India</strong> — <strong>3.97 GPA</strong>, two IEEE publications, zero projects left at the prototype stage.</p>
+
+      <div class="hero-actions reveal">
+        <a class="btn solid magnetic" href="#featured">View my work ↓</a>
+        <a class="btn magnetic" href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        <div class="hero-social">
+          <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener" aria-label="GitHub"><span class="icon" style="--src:url('assets/icons/github.svg')"></span></a>
+          <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="mailto:somesh.kennedy@gmail.com" aria-label="Email">@</a>
+        </div>
+      </div>
+
+      <div class="hero-meta-row reveal">
+        <div class="loc"><span><b>Dallas, Texas</b> · <span id="clock">-- -- --</span></span><span>Open to AI/ML, Software &amp; Data roles</span></div>
+        <div class="scroll-cue"><span class="line"></span>SCROLL</div>
+      </div>
+    </div>
+  </section>
+
   <main>
 
     <!-- ============ 01 INTRODUCTION ============ -->
-    <section class="section intro" id="introduction">
-      <div class="section-rule shell"><span>01</span><i></i><b>/INTRODUCTION</b></div>
-      <div class="side-label">/about me</div>
-      <div class="content-shell intro-content">
-        <h2>I build agentic AI systems where language models meet production engineering. <em>Retrieval, tool use and orchestration — shipped as software people can rely on.</em></h2>
-        <div class="intro-info">
+    <section class="section" id="introduction">
+      <div class="content-shell">
+        <div class="section-head reveal">
+          <div><span class="num">01</span><h2>Introduction</h2></div>
+          <span class="tag">/about-me</span>
+        </div>
+
+        <div class="intro-grid reveal">
           <div class="photo">
             <img src="assets/photo.jpg" alt="Portrait of Somesh Kennedy" onerror="this.parentElement.classList.add('no-photo');this.remove()">
           </div>
           <div class="intro-copy">
-            <p>I’m Somesh Kennedy, an AI engineer and Computer Science graduate student at UT Dallas. I’ve built risk-assessment agents, RAG systems and LLM services through internships in the US and India.</p>
-            <p>LangGraph, MCP, FastAPI, AWS — from prompt evaluation to deployment. Yep, I care about the whole loop.</p>
+            <p>I'm Somesh Kennedy — an AI engineer and Computer Science graduate student at the <strong>University of Texas at Dallas</strong>. Across three internships in the US and India, I've built risk-assessment agents, retrieval-augmented systems and LLM services that made it past the prototype stage and into production.</p>
+            <p>I care about the whole loop: evaluating prompts before they ship, orchestrating agents that discover their own tools at runtime, and the unglamorous infrastructure work — Docker, CI, monitoring — that keeps it all running once the demo ends.</p>
+            <div class="intro-facts">
+              <div><b>3.97</b><span>GPA / 4.0</span></div>
+              <div><b>3</b><span>Internships</span></div>
+              <div><b>2</b><span>IEEE publications</span></div>
+              <div><b>2</b><span>Countries shipped in</span></div>
+            </div>
+            <a class="btn magnetic" href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
           </div>
-          <a class="corner-button" href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">RESUME</a>
         </div>
-        <div class="worked-with">
-          <b>/STACK</b>
+
+        <div class="marquee-wrap reveal">
+          <span class="eyebrow">/ CURRENT STACK</span>
           <div class="marquee">
-            <div class="marquee-track">
-              <span>LangGraph</span><span>LangChain</span><span>CrewAI</span><span>AutoGen</span><span>MCP</span>
-              <span>OpenAI</span><span>PyTorch</span><span>FastAPI</span><span>PostgreSQL</span><span>FAISS</span>
-              <span>Pinecone</span><span>Docker</span><span>Kubernetes</span><span>AWS</span><span>MLflow</span>
+            <div class="marquee-track" id="marquee">
+              <span><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span>LangChain</span>
+              <span>LangGraph</span>
+              <span>CrewAI</span>
+              <span>MCP</span>
+              <span><span class="icon" style="--src:url('assets/icons/pytorch.svg')"></span>PyTorch</span>
+              <span><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span>FastAPI</span>
+              <span><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span>PostgreSQL</span>
+              <span><span class="icon" style="--src:url('assets/icons/docker.svg')"></span>Docker</span>
+              <span><span class="icon" style="--src:url('assets/icons/kubernetes.svg')"></span>Kubernetes</span>
+              <span><span class="icon" style="--src:url('assets/icons/aws.svg')"></span>AWS</span>
+              <span><span class="icon" style="--src:url('assets/icons/mlflow.svg')"></span>MLflow</span>
+              <span><span class="icon" style="--src:url('assets/icons/huggingface.svg')"></span>Hugging Face</span>
+              <span><span class="icon" style="--src:url('assets/icons/python.svg')"></span>Python</span>
             </div>
           </div>
         </div>
@@ -105,27 +144,35 @@
     </section>
 
     <!-- ============ 02 FEATURED ============ -->
-    <section class="section featured" id="featured">
-      <div class="section-rule shell"><span>02</span><i></i><b>/FEATURED</b></div>
-      <div class="side-label">/featured</div>
+    <section class="section" id="featured">
       <div class="content-shell">
-        <h2 class="massive-title">.. best work</h2>
-        <div class="featured-stack">
+        <div class="section-head reveal">
+          <div><span class="num">02</span><h2>Featured work</h2></div>
+          <span class="tag">/selected-projects</span>
+        </div>
 
-          <article class="card" style="--i:0">
-            <div class="card-copy">
-              <div class="card-top"><span>01</span><span>WORLDLINK US / INTERNSHIP</span></div>
-              <h3>Agentic Risk<br>Assessment</h3>
-              <p>Risk assessment agents built on OpenAI, RAG and PostgreSQL, orchestrated with LangGraph and MCP so agents discover their tools at runtime — then decoupled into FastAPI microservices on AWS.</p>
-              <ul class="card-stats">
-                <li><b>12%</b><span>higher audit success rate</span></li>
-                <li><b>35%</b><span>fewer execution steps</span></li>
-                <li><b>45%</b><span>faster compliance processing</span></li>
+        <div class="card-stack">
+
+          <article class="pcard reveal" style="--i:0">
+            <div>
+              <div class="pcard-top"><span class="idx">01</span><span>WorldLink US · Internship</span></div>
+              <h3>Agentic Risk Assessment Engine</h3>
+              <p class="desc">Risk-assessment agents for compliance workflows — orchestrated with LangGraph, wired to OpenAI and PostgreSQL through a RAG pipeline, with MCP letting agents discover their own tools at runtime. Split into FastAPI microservices and deployed on AWS.</p>
+              <ul class="exp-stats">
+                <li><b>+12%</b><span>audit success rate</span></li>
+                <li><b>−35%</b><span>execution steps</span></li>
+                <li><b>+45%</b><span>faster compliance processing</span></li>
               </ul>
-              <ul class="tags"><li>LangGraph</li><li>MCP</li><li>RAG</li><li>OpenAI</li><li>PostgreSQL</li><li>FastAPI</li><li>AWS Lambda</li></ul>
+              <ul class="chip-row">
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span>LangGraph</li>
+                <li class="chip">MCP</li><li class="chip">RAG</li><li class="chip">OpenAI</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span>PostgreSQL</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span>FastAPI</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/aws.svg')"></span>AWS Lambda</li>
+              </ul>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
+            <div class="pflow" aria-hidden="true">
+              <ol>
                 <li><span>INPUT</span><b>Risk &amp; audit request</b></li>
                 <li class="hot"><span>ORCHESTRATE</span><b>LangGraph agent graph</b></li>
                 <li><span>DISCOVER</span><b>MCP runtime tool discovery</b></li>
@@ -135,20 +182,24 @@
             </div>
           </article>
 
-          <article class="card" style="--i:1">
-            <div class="card-copy">
-              <div class="card-top"><span>02</span><span>PERSONAL PROJECT / AGENTIC AI</span></div>
-              <h3>Agentic Customer<br>Support Platform</h3>
-              <p>A multi-agent support system built with CrewAI and MCP for autonomous reasoning flows, backed by PostgreSQL, with custom prompt templates and a Django front-end that captures user queries.</p>
-              <ul class="card-stats">
+          <article class="pcard reveal" style="--i:1">
+            <div>
+              <div class="pcard-top"><span class="idx">02</span><span>Personal project · Agentic AI</span></div>
+              <h3>Agentic Customer Support Platform</h3>
+              <p class="desc">A multi-agent support system built on CrewAI and MCP for autonomous reasoning, backed by PostgreSQL, with custom prompt templates and a Django front end that captures and routes incoming queries.</p>
+              <ul class="exp-stats">
                 <li><b>72%</b><span>of queries resolved end-to-end</span></li>
-                <li><b>40%</b><span>less human escalation</span></li>
+                <li><b>−40%</b><span>human escalation</span></li>
               </ul>
-              <ul class="tags"><li>CrewAI</li><li>MCP</li><li>PostgreSQL</li><li>Django</li></ul>
-              <a class="card-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a>
+              <ul class="chip-row">
+                <li class="chip">CrewAI</li><li class="chip">MCP</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span>PostgreSQL</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/django.svg')"></span>Django</li>
+              </ul>
+              <a class="pcard-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
+            <div class="pflow" aria-hidden="true">
+              <ol>
                 <li><span>INPUT</span><b>Customer query · Django UI</b></li>
                 <li class="hot"><span>REASON</span><b>CrewAI multi-agent crew</b></li>
                 <li><span>ACT</span><b>MCP tool calls</b></li>
@@ -158,20 +209,24 @@
             </div>
           </article>
 
-          <article class="card" style="--i:2">
-            <div class="card-copy">
-              <div class="card-top"><span>03</span><span>PERSONAL PROJECT / RAG</span></div>
-              <h3>RAG Enterprise<br>Knowledge Agent</h3>
-              <p>A production RAG system on LangChain and Pinecone for semantic document retrieval, with automated pipelines that index enterprise documents and a FastAPI backend exposing the retrieval workflow.</p>
-              <ul class="card-stats">
+          <article class="pcard reveal" style="--i:2">
+            <div>
+              <div class="pcard-top"><span class="idx">03</span><span>Personal project · RAG</span></div>
+              <h3>RAG Enterprise Knowledge Agent</h3>
+              <p class="desc">A production RAG system on LangChain and Pinecone for semantic document retrieval, with automated pipelines that index enterprise documents and a FastAPI backend exposing the retrieval workflow.</p>
+              <ul class="exp-stats">
                 <li><b>88%</b><span>answer relevance score</span></li>
                 <li><b>50+</b><span>enterprise documents indexed</span></li>
               </ul>
-              <ul class="tags"><li>LangChain</li><li>Pinecone</li><li>RAG</li><li>FastAPI</li></ul>
-              <a class="card-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a>
+              <ul class="chip-row">
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span>LangChain</li>
+                <li class="chip">Pinecone</li><li class="chip">RAG</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span>FastAPI</li>
+              </ul>
+              <a class="pcard-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
+            <div class="pflow" aria-hidden="true">
+              <ol>
                 <li><span>INGEST</span><b>50+ enterprise documents</b></li>
                 <li><span>INDEX</span><b>Automated pipeline → Pinecone</b></li>
                 <li class="hot"><span>RETRIEVE</span><b>LangChain semantic search</b></li>
@@ -186,182 +241,197 @@
     </section>
 
     <!-- ============ 03 EXPERIENCE ============ -->
-    <section class="section experience" id="experience">
-      <div class="section-rule shell"><span>03</span><i></i><b>/EXPERIENCE</b></div>
-      <div class="side-label">/experience</div>
+    <section class="section" id="experience">
       <div class="content-shell">
-        <h2 class="massive-title">.. experience</h2>
-        <div class="principle-intro">
-          <p>Three internships and an independent research project<br>across AI engineering, backend systems and data science.</p>
-          <h3>From prototype to production,<br>one pipeline at a time</h3>
+        <div class="section-head reveal">
+          <div><span class="num">03</span><h2>Experience</h2></div>
+          <span class="tag">/from-prototype-to-production</span>
         </div>
 
-        <div class="case-scroll" tabindex="0" aria-label="Work experience, scroll horizontally">
+        <div class="exp-list stagger">
 
-          <div class="case-item">
-            <div class="case-header">
-              <div class="case-title"><h3>WorldLink <em>US</em></h3><p>AI Engineer Intern · Jun – Aug 2025 · Frisco, Texas</p></div>
-              <p class="case-desc">Agentic risk and compliance systems on AWS — from RAG and orchestration to prompt-evaluation benchmarks.</p>
-            </div>
-            <div class="board">
-              <div class="tile dark span2"><small>RAG · OPENAI · POSTGRESQL</small><b>+12%</b><p>Audit success rate from risk assessment agents architected on RAG.</p></div>
-              <div class="tile lime"><small>LANGGRAPH · MCP</small><b>−35%</b><p>Execution steps, using runtime tool discovery in agentic pipelines.</p></div>
-              <div class="tile"><small>FASTAPI · DOCKER · EC2</small><b class="word">FastAPI</b><p>Agent workflows decoupled into Python microservices.</p></div>
-              <div class="tile"><small>AWS LAMBDA</small><b>+45%</b><p>Faster compliance processing via automated governance triggers.</p></div>
-              <div class="tile"><small>PYTEST · MLFLOW</small><b class="word">Evals</b><p>Automated prompt-evaluation benchmarks to speed up LLM validation cycles.</p></div>
+          <div class="exp-row reveal">
+            <div class="exp-when"><span class="yr">2025</span>Jun – Aug<br>Frisco, TX</div>
+            <div class="exp-body">
+              <h3>WorldLink <em>US</em></h3>
+              <p class="exp-role">AI Engineer Intern</p>
+              <p class="exp-desc">Built agentic risk and compliance systems on AWS — RAG-backed reasoning, LangGraph orchestration with runtime tool discovery via MCP, and automated prompt-evaluation benchmarks to speed up LLM validation cycles.</p>
+              <ul class="exp-stats">
+                <li><b>+12%</b><span>audit success rate</span></li>
+                <li><b>−35%</b><span>execution steps</span></li>
+                <li><b>+45%</b><span>faster compliance processing</span></li>
+              </ul>
+              <ul class="chip-row">
+                <li class="chip">RAG</li><li class="chip">LangGraph</li><li class="chip">MCP</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span>FastAPI</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/docker.svg')"></span>Docker</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/aws.svg')"></span>AWS Lambda</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/mlflow.svg')"></span>MLflow</li>
+              </ul>
             </div>
           </div>
 
-          <div class="case-item">
-            <div class="case-header">
-              <div class="case-title"><h3>P9 <em>Technologies</em></h3><p>Software Engineer Intern · Jan – Mar 2024 · Puducherry, India</p></div>
-              <p class="case-desc">LLM integration, hybrid retrieval and CI/CD for enterprise data products.</p>
-            </div>
-            <div class="board">
-              <div class="tile dark span2"><small>FAISS · POSTGRESQL</small><b>+25%</b><p>Retrieval precision from hybrid vector search pipelines.</p></div>
-              <div class="tile lime"><small>MULTI-THREADED · RATE-LIMITED</small><b>3×</b><p>Throughput at peak load from a multi-threaded LLM integration layer.</p></div>
-              <div class="tile"><small>LANGCHAIN</small><b>+18%</b><p>Search response accuracy in a chatbot wired to enterprise databases.</p></div>
-              <div class="tile"><small>PYTHON · CI/CD</small><b>−15%</b><p>Manual QA effort, by validating data lineage and model quality in pipelines.</p></div>
-              <div class="tile"><small>PYTEST</small><b>−20%</b><p>Code bugs, with unit tests covering core backend features.</p></div>
+          <div class="exp-row reveal">
+            <div class="exp-when"><span class="yr">2024</span>Jan – Mar<br>Puducherry, India</div>
+            <div class="exp-body">
+              <h3>P9 <em>Technologies</em></h3>
+              <p class="exp-role">Software Engineer Intern</p>
+              <p class="exp-desc">Shipped a hybrid vector-search pipeline and a multi-threaded, rate-limited LLM integration layer for enterprise data products, with CI/CD covering data lineage and model quality.</p>
+              <ul class="exp-stats">
+                <li><b>+25%</b><span>retrieval precision</span></li>
+                <li><b>3×</b><span>throughput at peak load</span></li>
+                <li><b>+18%</b><span>search response accuracy</span></li>
+              </ul>
+              <ul class="chip-row">
+                <li class="chip">FAISS</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span>PostgreSQL</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span>LangChain</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/python.svg')"></span>Python</li>
+                <li class="chip">CI/CD</li>
+              </ul>
             </div>
           </div>
 
-          <div class="case-item">
-            <div class="case-header">
-              <div class="case-title"><h3>AI Research <em>Assistant</em></h3><p>Autonomous Literature Review Agent · Jul – Dec 2023 · Independent project</p></div>
-              <p class="case-desc">A multi-agent assistant that automates end-to-end literature reviews, from paper retrieval to summaries.</p>
-            </div>
-            <div class="board">
-              <div class="tile dark span2 term">
-                <small>CREWAI · GEMINI · STREAMLIT</small>
-<pre><span class="c">$</span> research "agentic workflows in LLMs"
+          <div class="exp-row reveal">
+            <div class="exp-when"><span class="yr">2023</span>Jul – Dec<br>Independent project</div>
+            <div class="exp-body">
+              <h3>AI Research <em>Assistant</em></h3>
+              <p class="exp-role">Autonomous Literature Review Agent</p>
+              <p class="exp-desc">A CrewAI crew powered by Gemini that automates end-to-end literature reviews — pulling papers from the ArXiv API, clustering them by topic and drafting summaries through a Streamlit front end.</p>
+              <div class="term">
+                <div class="term-bar"><span></span><span></span><span></span></div>
+                <pre><span class="c">$</span> research "agentic workflows in LLMs"
 <span class="c">→</span> crew.kickoff()
   <span class="ok">✓</span> arxiv.search()  <span class="d">100+ papers retrieved</span>
   <span class="ok">✓</span> cluster()       <span class="d">grouped by topic</span>
   <span class="ok">✓</span> summarize()     <span class="d">review drafted</span>
 <span class="c">›</span> <span class="cursor"></span></pre>
               </div>
-              <div class="tile lime"><small>ARXIV API</small><b>100+</b><p>Research papers dynamically retrieved, clustered and summarized.</p></div>
-              <div class="tile"><small>CREWAI · GEMINI</small><b class="word">Agents</b><p>A CrewAI crew powered by Gemini to run the review end to end.</p></div>
-              <div class="tile"><small>ARXIV API</small><b class="word">Retrieval</b><p>Integrated the ArXiv API to pull papers on demand.</p></div>
-              <div class="tile"><small>STREAMLIT</small><b class="word">Streamlit</b><p>A Streamlit front-end to automate literature reviews.</p></div>
+              <ul class="chip-row" style="margin-top:20px">
+                <li class="chip">CrewAI</li><li class="chip">Gemini</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/streamlit.svg')"></span>Streamlit</li>
+                <li class="chip">ArXiv API</li>
+              </ul>
             </div>
           </div>
 
-          <div class="case-item">
-            <div class="case-header">
-              <div class="case-title"><h3>NIT <em>Puducherry</em></h3><p>Data Science Intern · May – Jul 2023 · Karaikal, India</p></div>
-              <p class="case-desc">Predictive modeling and detection models on time-series signal data.</p>
-            </div>
-            <div class="board">
-              <div class="tile dark span2"><small>XGBOOST · PYTORCH CNN</small><b>94%</b><p>Accuracy from an ensemble architecture for predictive modeling.</p></div>
-              <div class="tile lime"><small>MOBILENETV2</small><b>+14%</b><p>Detection accuracy for chemical detection models.</p></div>
-              <div class="tile"><small>PYSPARK</small><b>−20%</b><p>Raw signal noise in time-series data through data-cleaning algorithms.</p></div>
-              <div class="tile span2"><small>DOCKER</small><b>9,000+</b><p>Data samples handled in containerized ML pipelines with a streamlined environment setup.</p></div>
+          <div class="exp-row reveal">
+            <div class="exp-when"><span class="yr">2023</span>May – Jul<br>Karaikal, India</div>
+            <div class="exp-body">
+              <h3>NIT <em>Puducherry</em></h3>
+              <p class="exp-role">Data Science Intern</p>
+              <p class="exp-desc">Built predictive and detection models on time-series signal data — an XGBoost + PyTorch CNN ensemble, a MobileNetV2 detector, and PySpark cleaning pipelines, containerized for a repeatable environment.</p>
+              <ul class="exp-stats">
+                <li><b>94%</b><span>ensemble model accuracy</span></li>
+                <li><b>+14%</b><span>detection accuracy</span></li>
+                <li><b>9,000+</b><span>samples in containerized pipelines</span></li>
+              </ul>
+              <ul class="chip-row">
+                <li class="chip">XGBoost</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/pytorch.svg')"></span>PyTorch CNN</li>
+                <li class="chip">MobileNetV2</li><li class="chip">PySpark</li>
+                <li class="chip"><span class="icon" style="--src:url('assets/icons/docker.svg')"></span>Docker</li>
+              </ul>
             </div>
           </div>
 
         </div>
-        <p class="scroll-hint">← SCROLL →</p>
       </div>
     </section>
 
     <!-- ============ 04 PROJECTS ============ -->
-    <section class="section portfolio" id="projects">
-      <div class="section-rule shell"><span>04</span><i></i><b>/PROJECTS</b></div>
-      <div class="side-label">/works</div>
+    <section class="section" id="projects">
       <div class="content-shell">
-        <h2 class="massive-title">.. projects</h2>
-        <div class="featured-stack">
+        <div class="section-head reveal">
+          <div><span class="num">04</span><h2>More projects</h2></div>
+          <span class="tag">/side-builds</span>
+        </div>
 
-          <article class="card" style="--i:0">
-            <div class="card-copy">
-              <div class="card-top"><span>01</span><span>PERSONAL PROJECT / AGENTIC AI</span></div>
-              <h3>Agentic Customer<br>Support Platform</h3>
-              <p>A multi-agent support system built with CrewAI and MCP for autonomous reasoning flows, backed by PostgreSQL, with custom prompt templates and a Django front-end that captures user queries.</p>
-              <ul class="card-stats">
-                <li><b>72%</b><span>of queries resolved end-to-end</span></li>
-                <li><b>40%</b><span>less human escalation</span></li>
+        <div class="projects-grid stagger">
+
+          <article class="pcard reveal">
+            <div>
+              <div class="pcard-top"><span class="idx">01</span><span>Agentic AI</span></div>
+              <h3>Agentic Customer Support</h3>
+              <p class="desc">Multi-agent support system on CrewAI + MCP, backed by PostgreSQL, with a Django front end for query capture.</p>
+              <ul class="exp-stats">
+                <li><b>72%</b><span>resolved end-to-end</span></li>
+                <li><b>−40%</b><span>escalation</span></li>
               </ul>
-              <ul class="tags"><li>CrewAI</li><li>MCP</li><li>PostgreSQL</li><li>Django</li></ul>
-              <a class="card-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a>
+              <ul class="chip-row"><li class="chip">CrewAI</li><li class="chip">MCP</li><li class="chip"><span class="icon" style="--src:url('assets/icons/django.svg')"></span>Django</li></ul>
+              <a class="pcard-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
-                <li><span>INPUT</span><b>Customer query · Django UI</b></li>
-                <li class="hot"><span>REASON</span><b>CrewAI multi-agent crew</b></li>
-                <li><span>ACT</span><b>MCP tool calls</b></li>
-                <li><span>DATA</span><b>PostgreSQL</b></li>
-                <li><span>OUTCOME</span><b>Resolved — or escalated</b></li>
+            <div class="pflow" aria-hidden="true">
+              <ol>
+                <li><span>REASON</span><b>CrewAI crew</b></li>
+                <li class="hot"><span>ACT</span><b>MCP tool calls</b></li>
+                <li><span>OUTCOME</span><b>Resolved / escalated</b></li>
               </ol>
             </div>
           </article>
 
-          <article class="card" style="--i:1">
-            <div class="card-copy">
-              <div class="card-top"><span>02</span><span>PERSONAL PROJECT / RAG</span></div>
-              <h3>RAG Enterprise<br>Knowledge Agent</h3>
-              <p>A production RAG system on LangChain and Pinecone for semantic document retrieval, with automated pipelines that index enterprise documents and a FastAPI backend exposing the retrieval workflow.</p>
-              <ul class="card-stats">
-                <li><b>88%</b><span>answer relevance score</span></li>
-                <li><b>50+</b><span>enterprise documents indexed</span></li>
+          <article class="pcard reveal">
+            <div>
+              <div class="pcard-top"><span class="idx">02</span><span>RAG</span></div>
+              <h3>RAG Knowledge Agent</h3>
+              <p class="desc">Production RAG on LangChain + Pinecone with automated ingestion pipelines and a FastAPI retrieval backend.</p>
+              <ul class="exp-stats">
+                <li><b>88%</b><span>relevance score</span></li>
+                <li><b>50+</b><span>docs indexed</span></li>
               </ul>
-              <ul class="tags"><li>LangChain</li><li>Pinecone</li><li>RAG</li><li>FastAPI</li></ul>
-              <a class="card-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a>
+              <ul class="chip-row"><li class="chip"><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span>LangChain</li><li class="chip">Pinecone</li><li class="chip"><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span>FastAPI</li></ul>
+              <a class="pcard-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
-                <li><span>INGEST</span><b>50+ enterprise documents</b></li>
-                <li><span>INDEX</span><b>Automated pipeline → Pinecone</b></li>
-                <li class="hot"><span>RETRIEVE</span><b>LangChain semantic search</b></li>
-                <li><span>GENERATE</span><b>LLM answer from context</b></li>
-                <li><span>SERVE</span><b>FastAPI endpoint</b></li>
+            <div class="pflow" aria-hidden="true">
+              <ol>
+                <li><span>INDEX</span><b>→ Pinecone</b></li>
+                <li class="hot"><span>RETRIEVE</span><b>Semantic search</b></li>
+                <li><span>GENERATE</span><b>LLM answer</b></li>
               </ol>
             </div>
           </article>
 
-          <article class="card" style="--i:2">
-            <div class="card-copy">
-              <div class="card-top"><span>03</span><span>PERSONAL PROJECT / MACHINE LEARNING</span></div>
-              <h3>Credit Card Fraud<br>Detection System</h3>
-              <p>An end-to-end fraud detection pipeline on a Kaggle dataset of transactions, using exploratory analysis, SMOTE to balance the rare fraud class, and feature engineering across 30 features.</p>
-              <ul class="card-stats">
+          <article class="pcard reveal">
+            <div>
+              <div class="pcard-top"><span class="idx">03</span><span>Machine Learning</span></div>
+              <h3>Credit Card Fraud Detection</h3>
+              <p class="desc">End-to-end fraud pipeline on 280K+ Kaggle transactions — EDA, SMOTE class balancing, and feature engineering across 30 features.</p>
+              <ul class="exp-stats">
                 <li><b>280K+</b><span>transactions analyzed</span></li>
                 <li><b>30</b><span>features engineered</span></li>
               </ul>
-              <ul class="tags"><li>ML</li><li>EDA</li><li>SMOTE</li><li>Feature Engineering</li><li>Kaggle</li></ul>
-              <a class="card-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a>
+              <ul class="chip-row"><li class="chip">ML</li><li class="chip">SMOTE</li><li class="chip">EDA</li></ul>
+              <a class="pcard-link" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
-            <div class="card-visual" aria-hidden="true">
-              <ol class="flow">
-                <li><span>INGEST</span><b>Kaggle · 280K+ transactions</b></li>
-                <li><span>EXPLORE</span><b>Exploratory data analysis</b></li>
-                <li class="hot"><span>BALANCE</span><b>SMOTE class balancing</b></li>
-                <li><span>ENGINEER</span><b>Feature engineering · 30 features</b></li>
-                <li><span>DETECT</span><b>End-to-end fraud pipeline</b></li>
+            <div class="pflow" aria-hidden="true">
+              <ol>
+                <li><span>BALANCE</span><b>SMOTE</b></li>
+                <li class="hot"><span>ENGINEER</span><b>30 features</b></li>
+                <li><span>DETECT</span><b>Fraud pipeline</b></li>
               </ol>
             </div>
           </article>
 
         </div>
-        <a class="corner-button all-work" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">SEE ALL ON GITHUB</a>
+        <div class="all-work"><a class="btn magnetic" href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">See all on GitHub ↗</a></div>
       </div>
     </section>
 
     <!-- ============ 05 PUBLICATIONS ============ -->
-    <section class="section publications" id="publications">
-      <div class="section-rule shell"><span>05</span><i></i><b>/PUBLICATIONS</b></div>
-      <div class="side-label">/papers</div>
+    <section class="section" id="publications">
       <div class="content-shell">
-        <h2 class="massive-title">.. publications</h2>
-        <div class="pubs">
+        <div class="section-head reveal">
+          <div><span class="num">05</span><h2>Publications</h2></div>
+          <span class="tag">/ieee</span>
+        </div>
+        <div class="pubs reveal">
           <div class="pub">
             <span class="pub-year">2024</span>
             <div>
               <h4>Tea Leaf Disease Classification with Ensemble Stacking</h4>
               <p>Somesh K, C. Shanmukha Srinivas et al.</p>
             </div>
-            <span class="pub-venue">ICDLAIR 2024 · IEEE</span>
+            <span class="pub-venue">ICDLAIR 2024</span>
           </div>
           <div class="pub">
             <span class="pub-year">2024</span>
@@ -369,56 +439,106 @@
               <h4>FinSecure: Utilizing IoT Sensors for Formaldehyde Detection</h4>
               <p>Harish S, Somesh K et al.</p>
             </div>
-            <span class="pub-venue">IConSCEPT 2024 · IEEE</span>
+            <span class="pub-venue">IConSCEPT 2024</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 05 TOOLKIT ============ -->
-    <section class="section skills" id="skills">
-      <div class="section-rule shell"><span>06</span><i></i><b>/TOOLKIT</b></div>
-      <div class="side-label">/toolkit</div>
+    <!-- ============ 06 TOOLKIT ============ -->
+    <section class="section" id="skills">
       <div class="content-shell">
-        <h2 class="massive-title">.. toolkit</h2>
+        <div class="section-head reveal">
+          <div><span class="num">06</span><h2>Toolkit</h2></div>
+          <span class="tag">/skills-&amp;-tools</span>
+        </div>
 
-        <div class="service-row">
-          <div><h3>AI / ML</h3><p>Designing, evaluating and optimizing LLM-powered systems and classical ML models.</p></div>
-          <ul class="tags light"><li>LLMs</li><li>Agentic AI</li><li>GenAI</li><li>Prompt Engineering</li><li>NLP</li><li>RAG</li><li>MCP</li><li>Model Optimization</li><li>LSTMs</li><li>Feature Engineering</li></ul>
+        <div class="focus-cloud reveal">
+          <span class="chip">LLMs</span><span class="chip">Agentic AI</span><span class="chip">GenAI</span>
+          <span class="chip">Prompt Engineering</span><span class="chip">NLP</span><span class="chip">RAG</span>
+          <span class="chip">MCP</span><span class="chip">Model Optimization</span><span class="chip">LSTMs</span>
+          <span class="chip">Feature Engineering</span><span class="chip">ETL / ELT</span><span class="chip">Data Structures</span>
         </div>
-        <div class="service-row">
-          <div><h3>Frameworks</h3><p>Agent orchestration frameworks and the deep-learning and data stack underneath them.</p></div>
-          <ul class="tags light"><li>LangChain</li><li>LangGraph</li><li>CrewAI</li><li>AutoGen</li><li>PyTorch</li><li>TensorFlow</li><li>Keras</li><li>Pandas</li><li>NumPy</li></ul>
+
+        <div class="stack-group reveal">
+          <h3>Agent frameworks &amp; LLM tooling</h3>
+          <div class="icon-grid stagger">
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/langchain.svg')"></span><span class="label">LangChain</span></div>
+            <div class="tool-tile"><span class="mono-badge">LG</span><span class="label">LangGraph</span></div>
+            <div class="tool-tile"><span class="mono-badge">CA</span><span class="label">CrewAI</span></div>
+            <div class="tool-tile"><span class="mono-badge">AG</span><span class="label">AutoGen</span></div>
+            <div class="tool-tile"><span class="mono-badge">MCP</span><span class="label">MCP</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/anthropic.svg')"></span><span class="label">Claude Code</span></div>
+            <div class="tool-tile"><span class="mono-badge">AI</span><span class="label">OpenAI</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/huggingface.svg')"></span><span class="label">Hugging Face</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/mlflow.svg')"></span><span class="label">MLflow</span></div>
+          </div>
         </div>
-        <div class="service-row">
-          <div><h3>Cloud &amp; Backend</h3><p>Data stores, vector search and the infrastructure to serve models reliably.</p></div>
-          <ul class="tags light"><li>AWS</li><li>PostgreSQL</li><li>MongoDB</li><li>ETL / ELT</li><li>FAISS</li><li>Chroma</li><li>Docker</li><li>Kubernetes</li></ul>
+
+        <div class="stack-group reveal">
+          <h3>ML / deep-learning &amp; data</h3>
+          <div class="icon-grid stagger">
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/pytorch.svg')"></span><span class="label">PyTorch</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/tensorflow.svg')"></span><span class="label">TensorFlow</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/keras.svg')"></span><span class="label">Keras</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/scikitlearn.svg')"></span><span class="label">scikit-learn</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/pandas.svg')"></span><span class="label">Pandas</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/numpy.svg')"></span><span class="label">NumPy</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/plotly.svg')"></span><span class="label">Plotly</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/jupyter.svg')"></span><span class="label">Jupyter</span></div>
+          </div>
         </div>
-        <div class="service-row">
-          <div><h3>Languages</h3><p>Everyday languages for backend services, data work and scripting.</p></div>
-          <ul class="tags light"><li>Python</li><li>C++</li><li>SQL</li><li>HTML / CSS</li><li>Bash / Shell</li><li>Git</li><li>Data Structures</li></ul>
+
+        <div class="stack-group reveal">
+          <h3>Cloud, data &amp; infra</h3>
+          <div class="icon-grid stagger">
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/aws.svg')"></span><span class="label">AWS</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/googlecloud.svg')"></span><span class="label">Vertex AI</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span><span class="label">PostgreSQL</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/mongodb.svg')"></span><span class="label">MongoDB</span></div>
+            <div class="tool-tile"><span class="mono-badge">FA</span><span class="label">FAISS</span></div>
+            <div class="tool-tile"><span class="mono-badge">CR</span><span class="label">Chroma</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/docker.svg')"></span><span class="label">Docker</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/kubernetes.svg')"></span><span class="label">Kubernetes</span></div>
+          </div>
         </div>
-        <div class="service-row">
-          <div><h3>Tools</h3><p>Where I prototype, build apps and ship.</p></div>
-          <ul class="tags light"><li>Streamlit</li><li>Django</li><li>FastAPI</li><li>Claude Code</li><li>Codex</li><li>GitHub</li><li>HuggingFace</li><li>VS Code</li><li>Vertex AI</li><li>Tableau</li></ul>
+
+        <div class="stack-group reveal">
+          <h3>Languages, web &amp; apps</h3>
+          <div class="icon-grid stagger">
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/python.svg')"></span><span class="label">Python</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/cplusplus.svg')"></span><span class="label">C++</span></div>
+            <div class="tool-tile"><span class="mono-badge">SQL</span><span class="label">SQL</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/html5.svg')"></span><span class="label">HTML5</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/css.svg')"></span><span class="label">CSS3</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/gnubash.svg')"></span><span class="label">Bash</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/git.svg')"></span><span class="label">Git</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/github.svg')"></span><span class="label">GitHub</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/fastapi.svg')"></span><span class="label">FastAPI</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/django.svg')"></span><span class="label">Django</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/streamlit.svg')"></span><span class="label">Streamlit</span></div>
+            <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/vscode.svg')"></span><span class="label">VS Code</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 06 ABOUT ============ -->
-    <section class="section about" id="about">
-      <div class="section-rule shell"><span>07</span><i></i><b>/ABOUT</b></div>
-      <div class="side-label">/education</div>
+    <!-- ============ 07 ABOUT ============ -->
+    <section class="section" id="about">
       <div class="content-shell">
-        <div class="about-top">
-          <div class="mini-stats"><p><b>3.97</b> GPA</p><p><b>2</b> countries</p></div>
+        <div class="section-head reveal">
+          <div><span class="num">07</span><h2>About &amp; education</h2></div>
+          <span class="tag">/who-i-am</span>
+        </div>
+
+        <div class="about-grid reveal">
           <div class="about-copy">
-            <h2>I’m Somesh Kennedy—I build AI systems where <em>agents, retrieval and engineering discipline meet real-world constraints.</em></h2>
-            <p>Master’s student in Computer Science at UT Dallas, working across LLM applications, agent orchestration and data pipelines — with experience shipping in both the US and India. I’m open to AI/ML Engineer, Software Engineer, Data Engineer and Data Scientist roles.</p>
-            <div class="social-mini">
-              <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener">LI</a>
-              <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">GH</a>
-              <a href="mailto:somesh.kennedy@gmail.com">EMAIL</a>
+            <h2>I'm Somesh Kennedy — I build AI systems where <span class="grad-text">agents, retrieval and engineering discipline meet real-world constraints.</span></h2>
+            <p>Master's student in Computer Science at UT Dallas, working across LLM applications, agent orchestration and data pipelines — with experience shipping in both the US and India. I'm open to AI/ML Engineer, Software Engineer, Data Engineer and Data Scientist roles.</p>
+            <div class="about-social">
+              <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="mailto:somesh.kennedy@gmail.com">Email ↗</a>
             </div>
           </div>
           <div class="photo photo-wide">
@@ -426,35 +546,31 @@
           </div>
         </div>
 
-        <div class="edu">
-          <h2>/education</h2>
-          <div class="edu-list">
-            <div class="edu-row">
-              <div>
-                <h3>Master of Science in Computer Science</h3>
-                <p>University of Texas at Dallas — Richardson, TX</p>
-                <p class="edu-courses">Artificial Intelligence · Natural Language Processing · Big Data Management · Database Designs · Machine Learning</p>
-              </div>
-              <div class="edu-meta"><span>Aug 2024 – May 2026</span><b>GPA 3.97 / 4.0</b></div>
+        <div class="edu reveal">
+          <div class="edu-row">
+            <div>
+              <h3>Master of Science in Computer Science</h3>
+              <p>University of Texas at Dallas — Richardson, TX</p>
+              <p class="edu-courses">Artificial Intelligence · NLP · Big Data Management · Database Designs · Machine Learning</p>
             </div>
-            <div class="edu-row">
-              <div>
-                <h3>Bachelor of Technology in Computer Science and Engineering</h3>
-                <p>National Institute of Technology Puducherry — Karaikal, India</p>
-              </div>
-              <div class="edu-meta"><span>Dec 2020 – Jun 2024</span><b>GPA 8.24 / 10.0</b></div>
+            <div class="edu-meta"><span>Aug 2024 – May 2026</span><b>GPA 3.97 / 4.0</b></div>
+          </div>
+          <div class="edu-row">
+            <div>
+              <h3>Bachelor of Technology, Computer Science &amp; Engineering</h3>
+              <p>National Institute of Technology Puducherry — Karaikal, India</p>
             </div>
+            <div class="edu-meta"><span>Dec 2020 – Jun 2024</span><b>GPA 8.24 / 10.0</b></div>
           </div>
         </div>
 
-        <div class="facts">
-          <h2>/facts &amp; figures</h2>
-          <div><strong data-count="3">3</strong><span>Internships completed</span></div>
-          <div><strong data-count="4">4</strong><span>Projects built</span></div>
-          <div><strong data-count="2">2</strong><span>IEEE publications</span></div>
+        <div class="facts-row reveal">
+          <div><strong data-count="3">0</strong><span>INTERNSHIPS COMPLETED</span></div>
+          <div><strong data-count="6">0</strong><span>PROJECTS SHIPPED</span></div>
+          <div><strong data-count="2">0</strong><span>IEEE PUBLICATIONS</span></div>
         </div>
 
-        <a class="corner-button contact-btn" href="mailto:somesh.kennedy@gmail.com">CONTACT ME</a>
+        <div class="contact-btn-wrap reveal"><a class="btn solid magnetic" href="mailto:somesh.kennedy@gmail.com">Contact me ↗</a></div>
       </div>
     </section>
 
@@ -462,25 +578,25 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="footer-links shell">
-      <b>SOMESH KENNEDY</b>
-      <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">GITHUB</a>
-      <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener">LINKEDIN</a>
-      <a href="mailto:somesh.kennedy@gmail.com">EMAIL</a>
-      <a href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">RESUME</a>
-    </div>
-    <div class="footer-inner content-shell">
-      <div class="footer-top">
-        <div>
-          <p>● &nbsp; I’m open to new roles</p>
-          <h2>Let’s build<br>something together</h2>
-          <ul class="tags roles"><li>AI/ML Engineer</li><li>Software Engineer</li><li>Data Engineer</li><li>Data Scientist</li></ul>
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="content-shell">
+      <div class="footer-top reveal">
+        <span class="eyebrow">● OPEN TO NEW ROLES</span>
+        <h2>Let's build<br>something together.</h2>
+        <a class="btn solid magnetic" href="mailto:somesh.kennedy@gmail.com">Email me ↗</a>
+        <div class="footer-roles">
+          <span class="chip">AI/ML Engineer</span><span class="chip">Software Engineer</span><span class="chip">Data Engineer</span><span class="chip">Data Scientist</span>
         </div>
-        <a class="corner-button inverse" href="mailto:somesh.kennedy@gmail.com">EMAIL ME</a>
       </div>
-      <h3><a href="mailto:somesh.kennedy@gmail.com">GET IN TOUCH</a></h3>
-      <div class="footer-image"></div>
-      <div class="footer-bottom"><span>© 2026 Somesh Kennedy. All rights reserved</span><span>Dallas, Texas</span></div>
+      <div class="footer-bottom">
+        <span>© 2026 Somesh Kennedy · Dallas, Texas</span>
+        <div class="flinks">
+          <a href="https://github.com/Somesh-Kennedy" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/somesh-kennedy/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        </div>
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
