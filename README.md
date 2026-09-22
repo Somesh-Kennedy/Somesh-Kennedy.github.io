@@ -1,7 +1,7 @@
-# Somesh Kennedy — Portfolio
+# Somesh Kennedy · Portfolio
 
 Static portfolio site (plain HTML/CSS/JS, no build step) hosted on GitHub Pages.
-Dark, motion-forward design — Inter for text, JetBrains Mono for labels/tags,
+Dark, motion-forward design: Inter for text, JetBrains Mono for labels/tags,
 with a self-hosted set of real tool/framework logos in the Toolkit section.
 
 ## Structure
@@ -16,12 +16,12 @@ with a self-hosted set of real tool/framework logos in the Toolkit section.
 | File | Used for |
 | --- | --- |
 | `assets/photo.jpg` | Portrait in the Introduction and About sections. A lime "SK" monogram shows until it exists. |
-| `assets/Somesh_Kennedy_Resume.pdf` | Target of the Résumé / CV links. Keep this exact filename — GitHub Pages is case-sensitive. |
+| `assets/Somesh_Kennedy_Resume.pdf` | Target of the Résumé / CV links. Keep this exact filename: GitHub Pages is case-sensitive. |
 
 ## Toolkit icons
 Logos in `assets/icons/` are single-color SVGs pulled from [Simple Icons](https://simpleicons.org)
 (CC0) and [Devicon](https://devicon.dev) (MIT), referenced as CSS masks so they inherit
-`currentColor` and recolor smoothly on hover — no external requests at runtime.
+`currentColor` and recolor smoothly on hover, with no external requests at runtime.
 
 To add a new tool icon:
 1. Download the SVG into `assets/icons/<name>.svg` (from Simple Icons or Devicon; a plain
