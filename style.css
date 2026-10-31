@@ -227,6 +227,11 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 
 /* ---------- more projects ---------- */
 .grid-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+/* a lone card on the last row of the three-column grid spans the row instead of leaving a gap */
+@media (min-width: 981px) {
+  .grid-cards .card:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
+  .grid-cards .card:last-child:nth-child(3n + 1) p { max-width: 72ch; }
+}
 .card {
   display: flex; flex-direction: column; padding: 22px;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
