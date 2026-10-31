@@ -28,24 +28,6 @@ Every image in `assets/projects/` comes from a real run, not a mock-up:
 
 Each project card also states what its result does and does not show.
 
-## Stock photos (More projects cards)
-The banner photo on each card in More projects is an **illustrative stock photo**, not a screenshot of that
-project. Each is labelled "Stock photo" with a credit link on the card. All are free to use under the
-[Unsplash License](https://unsplash.com/license); they are hosted locally in `assets/photos/` (resized to 800x450,
-metadata removed), not hotlinked. Do not replace them with Unsplash+ images: those need a paid licence.
-
-| Card | Photo | Photographer |
-| --- | --- | --- |
-| Credit Card Fraud Detection | [A person holding a credit card at a table](https://unsplash.com/photos/eN_DifpOb4Q) | SumUp |
-| Billing Reconciler | [Desk with calculator, notebook, pencil, and plant](https://unsplash.com/photos/QfQW294I8sQ) | Cht Gsml |
-| Automated AI Research Assistant | [Desk with open book, laptop, and study materials](https://unsplash.com/photos/HNjWq8WPyoY) | Yen Vu |
-| Case Escalation Tracker | [Graphs of performance analytics on a laptop screen](https://unsplash.com/photos/JKUTrJ4vK00) | Luke Chesser |
-| Qwen2.5-1.5B LoRA Fine-Tuning | [Glowing AI chip on a circuit board](https://unsplash.com/photos/w69Z8K-HGQU) | Immo Wegmann |
-| Movie Watchlist App | [Projector light beams illuminate an empty cinema auditorium](https://unsplash.com/photos/L70rE9UChmI) | Rafi Mohammed |
-| AR Gesture Virtual Mouse | [A person making a hand gesture with their hands](https://unsplash.com/photos/pj-4qBDaGQw) | Jonathan Castañeda |
-| Agentic Customer Support Platform | [Black and brown headset near laptop computer](https://unsplash.com/photos/BeVGrXEktIk) | Petr Macháček |
-| RAG Enterprise Knowledge Agent | [Shelves filled with colorful binders and folders](https://unsplash.com/photos/vT7r4YYbX0w) | Richard Heinen |
-
 ## Editing
 - **Add a project card:** copy a `.card` (More projects) or a `.case` (Selected work) block in `index.html`.
 - **Add an image to a case study:** put it in `assets/projects/`, then use the same markup as the others:
@@ -69,3 +51,22 @@ Open `index.html` in a browser, or serve the folder:
 ## Deploy
 Push to `main` of the repo named exactly `Somesh-Kennedy.github.io`. Settings → Pages → Deploy from a branch →
 `main` / `(root)`.
+
+## Photo credits
+The banner photo on each card in More projects is an **illustrative stock photo**, not a screenshot of that
+project. The cards do not show a credit, because the Unsplash License does not require one; the credits are kept
+here instead. All are free to use under the
+[Unsplash License](https://unsplash.com/license); they are hosted locally in `assets/photos/` (resized to 800x450,
+metadata removed), not hotlinked. Do not replace them with Unsplash+ images: those need a paid licence.
+
+| Card | Photo | Photographer |
+| --- | --- | --- |
+| Credit Card Fraud Detection | [A person holding a credit card at a table](https://unsplash.com/photos/eN_DifpOb4Q) | SumUp |
+| Billing Reconciler | [Desk with calculator, notebook, pencil, and plant](https://unsplash.com/photos/QfQW294I8sQ) | Cht Gsml |
+| Automated AI Research Assistant | [Desk with open book, laptop, and study materials](https://unsplash.com/photos/HNjWq8WPyoY) | Yen Vu |
+| Case Escalation Tracker | [Graphs of performance analytics on a laptop screen](https://unsplash.com/photos/JKUTrJ4vK00) | Luke Chesser |
+| Qwen2.5-1.5B LoRA Fine-Tuning | [Glowing AI chip on a circuit board](https://unsplash.com/photos/w69Z8K-HGQU) | Immo Wegmann |
+| Movie Watchlist App | [Projector light beams illuminate an empty cinema auditorium](https://unsplash.com/photos/L70rE9UChmI) | Rafi Mohammed |
+| AR Gesture Virtual Mouse | [A person making a hand gesture with their hands](https://unsplash.com/photos/pj-4qBDaGQw) | Jonathan Castañeda |
+| Agentic Customer Support Platform | [Black and brown headset near laptop computer](https://unsplash.com/photos/BeVGrXEktIk) | Petr Macháček |
+| RAG Enterprise Knowledge Agent | [Shelves filled with colorful binders and folders](https://unsplash.com/photos/vT7r4YYbX0w) | Richard Heinen |
