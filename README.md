@@ -1,47 +1,54 @@
 # Somesh Kennedy · Portfolio
 
-Static portfolio site (plain HTML/CSS/JS, no build step) hosted on GitHub Pages.
-Dark, motion-forward design: Inter for text, JetBrains Mono for labels/tags,
-with a self-hosted set of real tool/framework logos in the Toolkit section.
+Static portfolio site (plain HTML, CSS and JavaScript, no build step) hosted on GitHub Pages at
+https://somesh-kennedy.github.io/
+
+Editorial, light-first design with an automatic dark theme (and a manual toggle). Fraunces for headings,
+Inter for text, JetBrains Mono for labels, loaded from Google Fonts with system fallbacks.
 
 ## Structure
 | File | Purpose |
 | --- | --- |
-| `index.html` | All page content and section markup |
-| `style.css` | Design tokens, layout, animation/motion |
-| `script.js` | Scroll reveals, nav state, marquee, counters, hero word-cycler, magnetic buttons, cursor-spotlight |
-| `assets/icons/` | Self-hosted logo SVGs used in the Toolkit grid and skill chips |
+| `index.html` | All page content: hero, selected work, experience, more projects, skills, education, contact |
+| `style.css` | Design tokens (light and dark), layout, components, responsive and print rules |
+| `script.js` | Theme toggle, mobile menu, scroll-spy navigation, reveal on scroll, image lightbox |
+| `assets/projects/` | Project images (see below) |
+| `assets/icons/` | Self-hosted single-colour tool logos, used as CSS masks so they take the text colour |
+| `assets/Somesh_Kennedy_Resume.pdf` | Target of the Résumé links. Keep this exact filename: GitHub Pages is case-sensitive |
 
-## Add your own files
-| File | Used for |
+## Project images
+Every image in `assets/projects/` comes from a real run, not a mock-up:
+
+| Image | Source |
 | --- | --- |
-| `assets/photo.jpg` | Portrait in the Introduction and About sections. A lime "SK" monogram shows until it exists. |
-| `assets/Somesh_Kennedy_Resume.pdf` | Target of the Résumé / CV links. Keep this exact filename: GitHub Pages is case-sensitive. |
+| `clinical-evidence-agent.png`, `...-mobile.png` | Screenshots of the built React interface, run with the scripted demo model |
+| `billing-reconciler.png` | Output of a real reconciler run on a synthetic database with planted defects |
+| `billing-service.png`, `billing-service-docs.png` | Real responses from the running API and its generated documentation page |
+| `crm-support-agent.png` | Chart drawn from the project's saved evaluation reports |
+| `case-triage-workflow.png` | The n8n workflow drawn from its exported JSON (layout rearranged for readability) |
 
-## Toolkit icons
-Logos in `assets/icons/` are single-color SVGs pulled from [Simple Icons](https://simpleicons.org)
-(CC0) and [Devicon](https://devicon.dev) (MIT), referenced as CSS masks so they inherit
-`currentColor` and recolor smoothly on hover, with no external requests at runtime.
+Each project card also states what its result does and does not show.
 
-To add a new tool icon:
-1. Download the SVG into `assets/icons/<name>.svg` (from Simple Icons or Devicon; a plain
-   single-path/monochrome SVG works best).
-2. Add a tile in the relevant `.stack-group` in `index.html`:
-   ```html
-   <div class="tool-tile"><span class="icon" style="--src:url('assets/icons/<name>.svg')"></span><span class="label">Tool Name</span></div>
-   ```
-3. If no icon exists for a tool (a few brands, e.g. OpenAI, AWS, VS Code, LinkedIn, have been
-   pulled from Simple Icons over trademark requests), fall back to a monogram tile instead:
-   ```html
-   <div class="tool-tile"><span class="mono-badge">XX</span><span class="label">Tool Name</span></div>
-   ```
+## Editing
+- **Add a project card:** copy a `.card` (More projects) or a `.case` (Selected work) block in `index.html`.
+- **Add an image to a case study:** put it in `assets/projects/`, then use the same markup as the others:
+  a `button.shot` (or `button.thumb`) with `data-lightbox` and `data-caption`, and set `width` and `height` on the
+  `<img>` so the page does not shift while loading. Always write a descriptive `alt`.
+- **Add a tool icon:** download a single-colour SVG (for example from [Simple Icons](https://simpleicons.org) or
+  [Devicon](https://devicon.dev)) into `assets/icons/` and reference it as
+  `<span class="icon" style="--src:url('assets/icons/<name>.svg')"></span>` inside a `.chip`.
+- **Colours and fonts:** all in the `:root` block at the top of `style.css`.
+
+## Accessibility and performance
+Semantic landmarks and heading order, a skip link, visible focus styles, keyboard-operable menu and lightbox
+(Escape closes, focus returns to the thumbnail), `prefers-reduced-motion` respected, light and dark themes with
+sufficient contrast, lazy-loaded images with explicit dimensions, and no JavaScript needed to read the content.
 
 ## Run locally
 Open `index.html` in a browser, or serve the folder:
 
     python -m http.server 8000
 
-## Deploy to GitHub Pages
-Create a repo named exactly `Somesh-Kennedy.github.io`, push this folder to `main`,
-then Settings → Pages → Deploy from a branch → `main` / `(root)`.
-The site goes live at https://somesh-kennedy.github.io/
+## Deploy
+Push to `main` of the repo named exactly `Somesh-Kennedy.github.io`. Settings → Pages → Deploy from a branch →
+`main` / `(root)`.

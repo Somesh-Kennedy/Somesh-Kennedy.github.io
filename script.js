@@ -1,163 +1,106 @@
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* Somesh Kennedy · portfolio. Small, dependency-free behaviour: theme toggle, mobile menu, scroll-spy, reveal-on-scroll, image lightbox. */
+(() => {
+  const root = document.documentElement;
+  const $ = (selector, scope = document) => scope.querySelector(selector);
+  const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ===== Local clock (Dallas) ===== */
-const clock = document.querySelector('#clock');
-function updateClock() {
-  if (!clock) return;
-  clock.textContent = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit', hour12: true
-  }).format(new Date()).replace(':', ' ').toUpperCase();
-}
-updateClock();
-setInterval(updateClock, 30000);
+  /* ---------- footer year ---------- */
+  const year = $('#year');
+  if (year) year.textContent = String(new Date().getFullYear());
 
-/* ===== Menu overlay ===== */
-const menuButton = document.querySelector('.menu-button');
-const menu = document.querySelector('#menu');
-function setMenu(open) {
-  menu.classList.toggle('open', open);
-  menu.setAttribute('aria-hidden', String(!open));
-  menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  document.body.classList.toggle('menu-open', open);
-}
-menuButton.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
-menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
-
-/* ===== Marquee: duplicate items for a seamless loop ===== */
-document.querySelectorAll('.marquee-track').forEach(track => {
-  [...track.children].forEach(node => {
-    const clone = node.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-  });
-  track.classList.add('ready');
-});
-
-/* ===== Scroll reveal (with stagger groups) ===== */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-document.querySelectorAll('.reveal, .stagger').forEach(el => revealObserver.observe(el));
-
-/* ===== Count-up stats ===== */
-function animateCount(el) {
-  const target = Number(el.dataset.count);
-  const duration = 1300;
-  const start = performance.now();
-  function frame(now) {
-    const t = Math.min(1, (now - start) / duration);
-    const eased = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.round(target * eased);
-    if (t < 1) requestAnimationFrame(frame);
+  /* ---------- theme: follows the system until the visitor picks one; the choice is remembered when storage is available ---------- */
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => (root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark' : systemDark.matches);
+  const themeButton = $('#themeToggle');
+  const syncThemeButton = () => themeButton && themeButton.setAttribute('aria-label', isDark() ? 'Switch to light theme' : 'Switch to dark theme');
+  syncThemeButton();
+  if (themeButton) {
+    themeButton.addEventListener('click', () => {
+      const next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (error) { /* private mode or blocked storage: the choice just is not remembered */ }
+      syncThemeButton();
+    });
   }
-  requestAnimationFrame(frame);
-}
-if (!reduceMotion) {
-  const countObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      animateCount(entry.target);
-      countObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
-} else {
-  document.querySelectorAll('[data-count]').forEach(el => { el.textContent = el.dataset.count; });
-}
+  systemDark.addEventListener('change', syncThemeButton);
 
-/* ===== Nav: glass-on-scroll + progress bar + active link ===== */
-const nav = document.querySelector('#nav');
-const progress = document.querySelector('#progress');
-function onScroll() {
-  const y = window.scrollY;
-  nav.classList.toggle('scrolled', y > 8);
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  if (progress) progress.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + '%';
-}
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
+  /* ---------- header shadow line once the page has scrolled ---------- */
+  const header = $('#siteHeader');
+  const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-const navLinks = document.querySelectorAll('.nav-links a');
-const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-if (sections.length) {
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (!link) return;
-      if (entry.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-  sections.forEach(s => sectionObserver.observe(s));
-}
+  /* ---------- mobile menu ---------- */
+  const menuButton = $('#menuToggle');
+  const nav = $('#navLinks');
+  const setMenu = (open) => {
+    if (!menuButton || !nav) return;
+    nav.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  if (menuButton && nav) {
+    menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    nav.addEventListener('click', (event) => { if (event.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 980) setMenu(false); });
+  }
 
-/* ===== Hero role cycler ===== */
-const cycleWords = ['reason.', 'retrieve.', 'decide.', 'orchestrate.', 'ship.'];
-const cycleWord = document.querySelector('#cycleWord');
-const cycleWrap = document.querySelector('#cycleWrap');
-if (cycleWord && cycleWrap && !reduceMotion) {
-  // Pre-measure the widest word so the layout doesn't jitter.
-  const measurer = document.createElement('span');
-  measurer.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;';
-  measurer.style.font = getComputedStyle(cycleWord).font;
-  document.body.appendChild(measurer);
-  let maxWidth = 0;
-  cycleWords.forEach(w => { measurer.textContent = w; maxWidth = Math.max(maxWidth, measurer.offsetWidth); });
-  measurer.remove();
-  cycleWrap.style.width = maxWidth + 'px';
+  /* ---------- scroll-spy: mark the nav link of the section being read (the last one whose top is above the reading line) ---------- */
+  const links = $$('#navLinks a[href^="#"]');
+  const sections = links.map((link) => $(link.getAttribute('href'))).filter(Boolean);
+  let spyQueued = false;
+  const updateSpy = () => {
+    spyQueued = false;
+    const line = window.innerHeight * 0.35;
+    let active = null;
+    sections.forEach((section) => { if (section.getBoundingClientRect().top <= line) active = section.id; });
+    links.forEach((link) => link.setAttribute('aria-current', String(link.getAttribute('href') === `#${active}`)));
+  };
+  const queueSpy = () => { if (!spyQueued) { spyQueued = true; requestAnimationFrame(updateSpy); } };
+  window.addEventListener('scroll', queueSpy, { passive: true });
+  window.addEventListener('resize', queueSpy);
+  updateSpy();
 
-  let i = 0;
-  setInterval(() => {
-    i = (i + 1) % cycleWords.length;
-    cycleWord.style.transform = 'translateY(-100%)';
-    cycleWord.style.opacity = '0';
-    setTimeout(() => {
-      cycleWord.textContent = cycleWords[i];
-      cycleWord.style.transform = 'translateY(100%)';
-      requestAnimationFrame(() => {
-        cycleWord.style.transition = 'none';
-        cycleWord.offsetHeight; // reflow
-        cycleWord.style.transition = '';
-        cycleWord.style.transform = 'translateY(0)';
-        cycleWord.style.opacity = '1';
+  /* ---------- reveal on scroll (the CSS only hides .reveal when this script is running) ---------- */
+  const revealed = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const reveal = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
       });
-    }, 500);
-  }, 2200);
-}
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    revealed.forEach((element) => reveal.observe(element));
+  } else {
+    revealed.forEach((element) => element.classList.add('in'));
+  }
 
-/* ===== Magnetic buttons ===== */
-if (!reduceMotion && matchMedia('(hover:hover)').matches) {
-  document.querySelectorAll('.magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width / 2) * 0.28;
-      const y = (e.clientY - r.top - r.height / 2) * 0.5;
-      btn.style.setProperty('--tx', x + 'px');
-      btn.style.setProperty('--ty', y + 'px');
+  /* ---------- lightbox for project screenshots ---------- */
+  const dialog = $('#lightbox');
+  const dialogImage = $('#lightboxImg');
+  const dialogCaption = $('#lightboxCaption');
+  let opener = null;
+  if (dialog && dialogImage && typeof dialog.showModal === 'function') {
+    document.addEventListener('click', (event) => {
+      const trigger = event.target.closest('[data-lightbox]');
+      if (!trigger) return;
+      opener = trigger;
+      dialogImage.src = trigger.dataset.lightbox;
+      dialogImage.alt = trigger.dataset.caption || '';
+      dialogCaption.textContent = trigger.dataset.caption || '';
+      dialog.showModal();
     });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.setProperty('--tx', '0px');
-      btn.style.setProperty('--ty', '0px');
+    $('#lightboxClose').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });     // a click on the backdrop
+    dialog.addEventListener('close', () => { dialogImage.removeAttribute('src'); if (opener) opener.focus(); });
+  } else {
+    /* No <dialog> support: the screenshots simply open in a new tab. */
+    document.addEventListener('click', (event) => {
+      const trigger = event.target.closest('[data-lightbox]');
+      if (trigger) window.open(trigger.dataset.lightbox, '_blank', 'noopener');
     });
-  });
-}
-
-/* ===== Cursor-spotlight on cards / tiles ===== */
-if (matchMedia('(hover:hover)').matches) {
-  document.querySelectorAll('.pcard, .tool-tile').forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-  });
-}
+  }
+})();
