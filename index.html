@@ -62,7 +62,7 @@
         <div>
           <span class="status"><span class="dot" aria-hidden="true"></span>Open to AI/ML, Software and Data Engineer roles</span>
           <h1 id="hero-title">I build AI and data systems you can <em>measure.</em></h1>
-          <p class="lede">I'm an MS Computer Science graduate from <strong>UT Dallas (GPA 3.97)</strong>. I build LLM agents, retrieval pipelines and data tooling, and I test them with evals, guardrails and reconciliation checks, not just demos. Everything below links to code and shows real output.</p>
+          <p class="lede">I'm an MS Computer Science graduate from <strong>UT Dallas (GPA 3.97)</strong>. I build LLM agents, retrieval pipelines and data tooling, and I test them with evals, guardrails and automated tests, not just demos. Everything below links to code and shows real output.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#work">See the work ↓</a>
             <a class="btn" href="assets/Somesh_Kennedy_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
@@ -79,7 +79,7 @@
           <div class="stat-grid">
             <div class="stat"><b>3.97</b><span>GPA, MS Computer Science</span></div>
             <div class="stat"><b>4</b><span>roles: 3 internships and a current Data Engineer role</span></div>
-            <div class="stat"><b>5</b><span>tested projects, each with code and results</span></div>
+            <div class="stat"><b>4</b><span>tested projects, each with code and results</span></div>
             <div class="stat"><b>2</b><span>IEEE conference papers</span></div>
           </div>
           <p class="now"><b>Now:</b> Data Engineer at Saayam For All, working remotely from Dallas, Texas.</p>
@@ -92,7 +92,7 @@
       <div class="shell">
         <div class="section-head reveal">
           <h2 id="work-title">Selected work</h2>
-          <p>Five projects from 2026. Each one has tests, a measured result, and an honest note on what the result does and does not show. Select an image to enlarge it.</p>
+          <p>Four projects from 2026. Each one has tests, a measured result, and an honest note on what the result does and does not show. Select an image to enlarge it.</p>
         </div>
 
         <div class="cases">
@@ -152,33 +152,6 @@
 
           <article class="case wide reveal">
             <div class="case-media">
-              <button class="shot" type="button" data-lightbox="assets/projects/billing-reconciler.png" data-caption="A real run of the reconciler on a synthetic database with planted defects: 288 of 288 planted keys found, no false alarms." aria-label="Enlarge screenshot: billing reconciler audit output">
-                <img src="assets/projects/billing-reconciler.png" width="1560" height="764" alt="Terminal output of the billing reconciler: 288 findings across five checks, sample findings, and a comparison with the answer key showing all planted defects found with no false alarms" loading="lazy" decoding="async">
-                <span class="zoom" aria-hidden="true">Enlarge</span>
-              </button>
-              <p class="caption">Real output from running the tool, not a mock-up.</p>
-            </div>
-            <div class="case-body">
-            <div>
-              <div class="case-kicker"><span class="num">03</span><span>Data engineering · Data quality</span></div>
-              <h3>Billing Reconciler</h3>
-              <p class="case-summary">A read-only command-line audit that recomputes every invoice from raw usage with its own independent implementation of the billing rules, using exact fractions and integer cents, and flags wrong invoices, duplicate usage, unbilled usage and unusual spikes. Exit codes make it usable as a CI gate.</p>
-              <div class="case-links"><a class="btn small primary" href="https://github.com/Somesh-Kennedy/billing-reconciliation-and-anomaly-checker" target="_blank" rel="noopener">View on GitHub ↗</a></div>
-            </div>
-            <div>
-              <div class="metrics">
-                <div class="metric"><b>240/240</b><span>planted defects found, 0 false alarms</span></div>
-                <div class="metric"><b>≈2 s</b><span>to audit 214K usage events</span></div>
-                <div class="metric"><b>120/120</b><span>invoices agreed with the real service on PostgreSQL 16</span></div>
-              </div>
-              <div class="chips"><span class="chip"><span class="icon" style="--src:url('assets/icons/python.svg')"></span>Python</span><span class="chip">SQL</span><span class="chip"><span class="icon" style="--src:url('assets/icons/postgresql.svg')"></span>PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">PyTest · 29 tests</span></div>
-              <p class="case-note">The data is synthetic and was generated alongside the checks. It shows the checks work as designed, not how they would perform on production data.</p>
-            </div>
-          </div>
-          </article>
-
-          <article class="case wide reveal">
-            <div class="case-media">
               <button class="shot" type="button" data-lightbox="assets/projects/billing-service.png" data-caption="Real responses from the running API: a retried usage event returns the same record, and the invoice totals $45.47." aria-label="Enlarge screenshot: billing service API responses">
                 <img src="assets/projects/billing-service.png" width="1560" height="596" alt="Terminal showing a usage event posted twice returning the same record id, then a generated invoice with a plan fee, an overage line, tax and a total of 45.47 dollars" loading="lazy" decoding="async">
                 <span class="zoom" aria-hidden="true">Enlarge</span>
@@ -190,7 +163,7 @@
             </div>
             <div class="case-body">
             <div>
-              <div class="case-kicker"><span class="num">04</span><span>Software engineering · Backend</span></div>
+              <div class="case-kicker"><span class="num">03</span><span>Software engineering · Backend</span></div>
               <h3>Usage Rating &amp; Invoicing Service</h3>
               <p class="case-summary">A billing backend for a mobile carrier: it records voice, data and SMS usage, rates it against each customer's plan and generates monthly invoices over a REST API. The focus is correctness: decimal money, half-up rounding, month boundaries, time zones and safe retries, with every rule written down and tested.</p>
               <div class="case-links"><a class="btn small primary" href="https://github.com/Somesh-Kennedy/billing-service" target="_blank" rel="noopener">View on GitHub ↗</a></div>
@@ -217,7 +190,7 @@
             </div>
             <div class="case-body">
             <div>
-              <div class="case-kicker"><span class="num">05</span><span>Automation · LLM workflow</span></div>
+              <div class="case-kicker"><span class="num">04</span><span>Automation · LLM workflow</span></div>
               <h3>AI Case Triage Workflow</h3>
               <p class="case-summary">A support ticket arrives at a webhook, an LLM proposes a category and priority, and rules the model cannot override decide the routing. The result becomes a Salesforce Case. A model outage, a CRM outage, prompt injection and card numbers in the ticket are all handled on purpose.</p>
               <div class="case-links"><a class="btn small primary" href="https://github.com/Somesh-Kennedy/n8n-ai-case-triage" target="_blank" rel="noopener">View on GitHub ↗</a></div>

@@ -22,7 +22,6 @@ Every image in `assets/projects/` comes from a real run, not a mock-up:
 | Image | Source |
 | --- | --- |
 | `clinical-evidence-agent.png`, `...-mobile.png` | Screenshots of the built React interface, run with the scripted demo model |
-| `billing-reconciler.png` | Output of a real reconciler run on a synthetic database with planted defects |
 | `billing-service.png`, `billing-service-docs.png` | Real responses from the running API and its generated documentation page |
 | `crm-support-agent.png` | Chart drawn from the project's saved evaluation reports |
 | `case-triage-workflow.png` | The n8n workflow drawn from its exported JSON (layout rearranged for readability) |

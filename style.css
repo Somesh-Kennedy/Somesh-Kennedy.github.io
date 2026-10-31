@@ -169,7 +169,7 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 
 /* ---------- case studies ---------- */
 .cases { display: grid; gap: clamp(56px, 8vw, 96px); }
-.case { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.case { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
 .case:nth-child(even) .case-media { order: 2; }
 .case-kicker { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font: 600 0.76rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 .case-kicker .num { color: var(--muted); }
@@ -188,6 +188,7 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 /* wide variant: a full-width image on top, the text in two columns underneath */
 .case.wide { grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 3.5vw, 40px); align-items: start; }
 .case.wide:nth-child(even) .case-media { order: 0; }
+.case.wide .case-media { width: 100%; max-width: 860px; margin-inline: auto; }
 .case.wide .shot img { width: 100%; }
 .case-body { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(24px, 5vw, 64px); align-items: start; }
 .case.wide .metrics { margin-top: 0; }
